@@ -99,6 +99,18 @@ class SimpleCalci {
 		}
 	}
 
+	// Square Operation
+	public void square(int square1, int square2) {
+		if (square1 > 0 && square2 > 0) {
+			total_ = (int) Math.pow(square1, square2);
+			System.out.println("Squaring(^) Operations:- " + total_);
+		} else if (square1 == 0 || square2 == 0) {
+			System.out.println("Enter square greater than 0");
+		} else {
+			System.out.println("Wrong Information Provided!!!");
+		}
+	}
+
 	public void showCalculator() {
 
 		char options = '\0';
@@ -114,7 +126,8 @@ class SimpleCalci {
 		System.out.println("C. MULTIPLY(*)");
 		System.out.println("D. DIVISION(/)");
 		System.out.println("E. MODULUS(%)");
-		System.out.println("F. EXIT");
+		System.out.println("F. SQUARE(^)");
+		System.out.println("G. EXIT");
 
 		do {
 			System.out.println("===================================================");
@@ -170,6 +183,15 @@ class SimpleCalci {
 				break;
 
 			case 'F':
+				System.out.println("====================================");
+				System.out.println("Enter the number for squaring:-");
+				int sq1 = scan.nextInt();
+				int sq2 = scan.nextInt();
+				square(sq1, sq2);
+				System.out.println("====================================");
+				break;
+
+			case 'G':
 				System.out.println("End of the Calculator Operation!!!");
 				break;
 
@@ -178,7 +200,8 @@ class SimpleCalci {
 				break;
 			}
 
-		} while (options != 'F');
+		} while (options != 'G');
 
 	}
 }
+
