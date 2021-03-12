@@ -99,13 +99,25 @@ class SimpleCalci {
 		}
 	}
 
-	// Square Operation
+	// Squaring Operations(x^x)
 	public void square(int square1, int square2) {
 		if (square1 > 0 && square2 > 0) {
 			total_ = (int) Math.pow(square1, square2);
 			System.out.println("Squaring(^) Operations:- " + total_);
 		} else if (square1 == 0 || square2 == 0) {
 			System.out.println("Enter square greater than 0");
+		} else {
+			System.out.println("Wrong Information Provided!!!");
+		}
+	}
+
+	// Square Root Operations(√)
+	public void squareRoot(int root1) {
+		if (root1 > 0) {
+			total_ = (int) Math.sqrt(root1);
+			System.out.println("Square Root Operations:- " + total_);
+		} else if (root1 == 0) {
+			System.out.println("Enter root1 greater than 0");
 		} else {
 			System.out.println("Wrong Information Provided!!!");
 		}
@@ -127,7 +139,8 @@ class SimpleCalci {
 		System.out.println("D. DIVISION(/)");
 		System.out.println("E. MODULUS(%)");
 		System.out.println("F. SQUARE(^)");
-		System.out.println("G. EXIT");
+		System.out.println("G. SQUARE ROOT(√)");
+		System.out.println("H. EXIT");
 
 		do {
 			System.out.println("===================================================");
@@ -192,6 +205,14 @@ class SimpleCalci {
 				break;
 
 			case 'G':
+				System.out.println("====================================");
+				System.out.println("Enter the number for square root:-");
+				int sqroot1 = scan.nextInt();
+				squareRoot(sqroot1);
+				System.out.println("====================================");
+				break;
+
+			case 'H':
 				System.out.println("End of the Calculator Operation!!!");
 				break;
 
@@ -200,7 +221,7 @@ class SimpleCalci {
 				break;
 			}
 
-		} while (options != 'G');
+		} while (options != 'H');
 
 	}
 }
