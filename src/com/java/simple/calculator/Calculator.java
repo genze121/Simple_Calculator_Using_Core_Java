@@ -22,17 +22,19 @@ public class Calculator {
 }
 
 class SimpleCalci {
-
+	
+	// Instance or Global Variables
 	String user;
 	String userID;
 	int total_;
-
+	
+	// Parameterised Constructor
 	public SimpleCalci(String user, String userID) {
 		this.user = user;
 		this.userID = userID;
 	}
 
-	// Addition Operation
+	// Addition Operation(+)
 	public void add(int num1, int num2) {
 
 		if (num1 > 0 && num2 > 0) {
@@ -46,7 +48,7 @@ class SimpleCalci {
 
 	}
 
-	// Subtraction Operation
+	// Subtraction Operation(-)
 	public void subtract(int num1, int num2) {
 
 		if (num1 > 0 && num2 > 0) {
@@ -60,7 +62,7 @@ class SimpleCalci {
 
 	}
 
-	// Multiplication Operation
+	// Multiplication Operation(*)
 	public void multiply(int num1, int num2) {
 
 		if (num1 > 0 && num2 > 0) {
@@ -73,7 +75,7 @@ class SimpleCalci {
 		}
 	}
 
-	// Divivsion Operation
+	// Divivsion Operation(/)
 	public void divide(int num1, int num2) {
 
 		if (num1 > 0 && num2 > 0) {
@@ -86,7 +88,7 @@ class SimpleCalci {
 		}
 	}
 
-	// Modulus Operation
+	// Modulus Operation(%)
 	public void modulus(int num1, int num2) {
 
 		if (num1 > 0 && num2 > 0) {
@@ -99,7 +101,7 @@ class SimpleCalci {
 		}
 	}
 
-	// Squaring Operations(x^x)
+	// Squaring Operation(x^x)
 	public void square(int square1, int square2) {
 		if (square1 > 0 && square2 > 0) {
 			total_ = (int) Math.pow(square1, square2);
@@ -111,7 +113,7 @@ class SimpleCalci {
 		}
 	}
 
-	// Square Root Operations(√)
+	// Square Root Operation(√)
 	public void squareRoot(int root1) {
 		if (root1 > 0) {
 			total_ = (int) Math.sqrt(root1);
